@@ -1,3 +1,9 @@
+
+h1 {
+    text-align: center;
+}
+
+
 .input-group .form-control {
     position: relative;
     z-index: 2;
@@ -9,6 +15,14 @@
     color:blue;
 
 }
+.input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-left: -198%;
+    margin-top: 0%;
+    width: 
+}
+
 .input-group-btn>.btn {
     position: relative;
     right: 103%;
@@ -40,6 +54,7 @@ img {
     border-color: #4E86EC;
     width: 31%;
     margin-top: 10%;
+    fixed_height
 }
 /*loading gifs - image runs*/
 .modal {
