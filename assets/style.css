@@ -11,7 +11,7 @@ h1 {
     width: 100%;
     margin-bottom: 0;
     width: 29%;
-    left: 63%;
+    left: 60%;
     color:blue;
 
 }
@@ -51,10 +51,10 @@ img {
     margin: 10px;
     border-style: solid;
     border-width: 10px;
-    border-color: #4E86EC;
+    border-color: red;
     width: 31%;
     margin-top: 10%;
-    fixed_height
+    
 }
 /*loading gifs - image runs*/
 .modal {
