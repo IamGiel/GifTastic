@@ -1,0 +1,70 @@
+.input-group .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    width: 29%;
+    left: 63%;
+    color:blue;
+
+}
+.input-group-btn>.btn {
+    position: relative;
+    right: 103%;
+    margin-bottom: 10px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    margin-top: 10px;
+}
+#images-view {
+	background-color:#30CCD7;
+}
+
+img {
+    vertical-align: middle;
+    margin: 10px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #4E86EC;
+    width: 31%;
+    margin-top: 10%;
+}
+/*loading gifs - image runs*/
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('http://i.stack.imgur.com/FhHRx.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
