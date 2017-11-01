@@ -1,6 +1,6 @@
 $(document).ready(function() {
     
-	var arrayAnimals = ["lebron","Jordan","kyrie","durant", "kobe", "shaquille", "curry", "harden" ];
+	var arrayAnimals = ["happy","dazzled","puzzled","surprised", "downcast", "excited", "embarassed", "meh" ];
 
 	//dynamically create button onClick
 	// Function for displaying movie data
@@ -26,7 +26,7 @@ $(document).ready(function() {
           // Adding the button to the buttons-view div
           $("#buttons-view").append(a);
           $("#images-view").html("");//aha! this removed the previous data calls that were displayed!
-          $("#newAnimals").html("");
+          
 		}
  	}
 
@@ -80,9 +80,13 @@ $(document).ready(function() {
 									$(this).attr("src", $(this).attr("data-animate"));
 									$(this).attr("data-state", "animate");
 									} else {
-									$(this).attr("src", $(this).attr("data-still"));
-									$(this).attr("data-state", "still");
-								}
+										$(this).attr("src", $(this).attr("data-still"));
+										$(this).attr("data-state", "still");
+									}
+										if(images === "undefine"){
+											alert("undefined");
+								          	$("#images-view").html("");//aha! this removed the previous data calls that were displayed!
+										}        
 							});
 						}
 					}//loop
@@ -109,11 +113,22 @@ $(document).ready(function() {
 
 	        // Calling renderButtons which handles the processing of our movie array
 	        renderButtons();
+	        //if user did not type anything and clicked search, prevent adding button
+	        if(animal === "") {
+	          	alert("Enter something in the field.");
+	          	arrayAnimals.splice(-1)[0];
+	        //prevent adding displaying data for 'undefined'
+			}if(animal === undefined) {
+				alert("undefined");
+	          	$("#images-view").html("");//aha! this removed the previous data calls that were displayed!
+	        }
+
+
       	});
 
 			// Adding a click event listener to all elements with a class of "btn"
-		$(document).on("click", ".btn", newAnimalGIFS);
-
+		$(document).on("click", "button", newAnimalGIFS);
+		 $("#newAnimals").html("");
 		$body = $("body");
 
 		$(document).on({

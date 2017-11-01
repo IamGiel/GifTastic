@@ -46,7 +46,7 @@ h1, h3 {
 	background-color:black;
 }
 
-img {
+img.gif {
     vertical-align: middle;
     margin: 10px;
     border-style: solid;
@@ -54,6 +54,7 @@ img {
     border-color: red;
     width: 31%;
     margin-top: 10%;
+    height:10%;
     
 }
 /*loading gifs - image runs*/
