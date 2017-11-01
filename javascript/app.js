@@ -1,6 +1,6 @@
 $(document).ready(function() {
     
-	var arrayAnimals = ["dog","lion","dolphine","falcon"];
+	var arrayAnimals = ["lebron","Jordan","kyrie","durant"];
 
 	//dynamically create button onClick
 	// Function for displaying movie data
@@ -20,10 +20,12 @@ $(document).ready(function() {
           a.addClass("btn btn-primary");
           // Adding a data-attribute and arrayAnimals[i]
           a.attr("data-animal", arrayAnimals[i]);
+          a.attr("id", "anotherButton");
           // Providing the initial button text
           a.text(arrayAnimals[i]);
           // Adding the button to the buttons-view div
           $("#buttons-view").append(a);
+          $("#images-view").html("");//aha! this removed the previous data calls that were displayed!
 		}
  	}
 
@@ -32,7 +34,7 @@ $(document).ready(function() {
     var newAnimalGIFS = function(){
 	// when button is clicked, make queries
 		$("button").on("click", function() {
-
+			
 			var animal = $(this).attr("data-animal");
 					//creating url variable
 			queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=lNOxXhcQPW9zthoUTkM6MpXFvvlOFwzv&limit=10";
@@ -48,21 +50,10 @@ $(document).ready(function() {
 	        	var results = response.data;
 	  
 		        for (var i = 0; i < results.length; i++) {
-					// Only taking action if the photo has an appropriate rating
-			        if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
-
-				        	//store data to image tag with attr
-					  		
+					// // Only taking action if the photo has an appropriate rating
+			        if (results[i].rating !== "r") {
 					    	var animalDiv = $("<div class='animal'>"); 
-					    	//query rating
-					    	var rating = results[i].rating;
-					    	//create element p with a text 
-					    	var pOne = $("<p>").text("Rating: " + rating);
-					    	//attach rating to element p
-					    	animalDiv.append(pOne);
-					    	//create an img tag
 					    	var images = $("<img>");
-
 					    	images.attr("src", results[i].images.original_still.url);
 					    	images.attr("data-animate", results[i].images.original.url);
 					    	images.attr("data-still", results[i].images.original_still.url);
@@ -72,7 +63,7 @@ $(document).ready(function() {
 
 					    	
 					    	
-					    	console.log(images);
+					//     	console.log(images);
 					    	
 					    	animalDiv.append(images);
 					    	$("#images-view").prepend(images);
@@ -93,7 +84,7 @@ $(document).ready(function() {
 								}
 							});
 						}
-					}
+					}//loop
 				});
 			});					    	
 		}  
@@ -104,8 +95,9 @@ $(document).ready(function() {
 
 
 	 // This function handles events where a movie button is clicked
-	  	$("#newButtons").on("click", function(event) {
+	  	$("#goButton").on("click", function(event) {
 	        event.preventDefault();
+	        alert("hello");
 	        // This line grabs the input from the textbox
 	        $("#buttons-view").empty();
 	       
