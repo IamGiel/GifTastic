@@ -1,6 +1,6 @@
 $(document).ready(function() {
     
-	var arrayAnimals = ["lebron","Jordan","kyrie","durant"];
+	var arrayAnimals = ["lebron","Jordan","kyrie","durant", "kobe", "shaquille", "curry", "harden" ];
 
 	//dynamically create button onClick
 	// Function for displaying movie data
@@ -26,6 +26,7 @@ $(document).ready(function() {
           // Adding the button to the buttons-view div
           $("#buttons-view").append(a);
           $("#images-view").html("");//aha! this removed the previous data calls that were displayed!
+          $("#newAnimals").html("");
 		}
  	}
 
@@ -97,7 +98,7 @@ $(document).ready(function() {
 	 // This function handles events where a movie button is clicked
 	  	$("#goButton").on("click", function(event) {
 	        event.preventDefault();
-	        alert("hello");
+	        
 	        // This line grabs the input from the textbox
 	        $("#buttons-view").empty();
 	       
