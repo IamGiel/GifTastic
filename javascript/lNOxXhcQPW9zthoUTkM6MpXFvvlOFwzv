@@ -4,3 +4,8 @@ http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=lNOxXhcQPW9zthoUTkM6MpXF
 
 images.attr("src", results[i].images.original_still.url);
 images.attr("src", results[i].images.original.url);
+
+=================================
+music library API's
+
+http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=kamikazee&api_key=67c6663c0d5ae1eead43a8258d1f08b6&format=json
