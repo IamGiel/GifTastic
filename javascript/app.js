@@ -102,7 +102,7 @@ $(document).ready(function() {
 	 // This function handles events where a movie button is clicked
 	  	$("#goButton").on("click", function(event) {
 	        event.preventDefault();
-	        
+ 
 	        // This line grabs the input from the textbox
 	        $("#buttons-view").empty();
 	       
@@ -135,6 +135,10 @@ $(document).ready(function() {
 			ajaxStart: function() { $body.addClass("loading"); },
 			ajaxStop: function() { $body.removeClass("loading"); }    
 		});		
+
+		if (event.keyCode === 13) {
+	                $("#goButton").click();
+	           	}
 
 });	
 
