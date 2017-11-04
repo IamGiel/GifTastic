@@ -136,10 +136,6 @@ $(document).ready(function() {
 			ajaxStop: function() { $body.removeClass("loading"); }    
 		});		
 
-		if (event.keyCode === 13) {
-	                $("#goButton").click();
-	           	}
-
 });	
 
 
