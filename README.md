@@ -1,4 +1,4 @@
-## A New Post
+
 ## AJAX and API request
 - Dynamically Create Buttons
 - Buttons generate 10 GIFs
